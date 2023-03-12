@@ -1,5 +1,5 @@
-import { Container } from 'react-grid-system';
 import { Helmet } from 'react-helmet';
+import Container from './style';
 import Navbar from '../Navbar';
 
 function Layout({ children, title }) {
@@ -12,11 +12,9 @@ function Layout({ children, title }) {
       <header>
         <Navbar />
       </header>
-      <main>
-        <Container>
-          {children}
-        </Container>
-      </main>
+      <Container>
+        {children}
+      </Container>
     </>
   );
 }

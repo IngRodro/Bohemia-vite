@@ -24,8 +24,21 @@ export const StyleMenuItem = styled(Button)`
   background: transparent;
   &:hover {
     opacity: 1;
-    color: ${({ theme }) => theme.colors.primary};
     border-bottom-color: ${({ theme, $type }) => ($type === 'PageItem' ? theme.colors.primary : 'transparent')};
+    :first-child{
+      margin-left: 5px;
+      color: ${({ theme }) => theme.colors.primary};
+    }
+    > svg {
+      margin-left: 5px;
+      color: ${({ theme }) => theme.colors.success};
+    }
+  }
+  > span {
+    margin-right: 5px;
+  }
+  > svg {
+    margin-left: 5px;
   }
 `;
 
@@ -55,9 +68,4 @@ export const StyleCloseSessionIcon = styled(IconLogout)`
 
 export const StyleLogInIcon = styled(IconLogin)`
   color: ${({ theme }) => theme.colors.text};
-  margin:
-
-  &:hover {
-    color: ${({ theme }) => theme.colors.success};
-  }
 `;
