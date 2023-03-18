@@ -1,5 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../../../Context/AuthContext';
+import ToggleSwitch from '../../Atoms/ToggleSwitch/TogleSwitch';
 import {
   StyleMenuItem,
   StyleMenuNavbar,
@@ -17,6 +18,7 @@ function MenuNavbar({ signButton = true }) {
 
   return (
     <StyleMenuNavbar>
+      <ToggleSwitch />
       {isAuthenticated ? (
         <>
           <StyleMenuItem

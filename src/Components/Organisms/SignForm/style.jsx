@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
 background-color: #fff;
-border-radius: 10px;
+border-radius: 8px;
 box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 position: relative;
 overflow: hidden;
@@ -68,7 +68,7 @@ export const Button = styled.button`
    border-radius: 20px;
    border: 1px solid ${({ theme }) => theme.colors.primary};
    background-color: ${({ theme }) => theme.colors.primary};
-   color: ${({ theme }) => theme.colors.text};
+   color: ${({ theme, textColor }) => theme.colors[textColor]};
    font-size: 12px;
    font-weight: bold;
    padding: 12px 45px;
@@ -83,8 +83,9 @@ export const Button = styled.button`
    }
 `;
 export const GhostButton = styled(Button)`
-background-color: transparent;
-border-color: #ffffff;
+  background-color: transparent;
+  border-color: #ffffff;
+  color: white;
 `;
 
 export const Anchor = styled.a`
@@ -150,8 +151,7 @@ export const RightOverlayPanel = styled(OverlayPanel)`
 
 export const Paragraph = styled.p`
 font-size: 28px;
-  font-weight: 100;
-  line-height: 1.5;
-  letter-spacing: 0.5px;
+  font-weight: 450;
+  line-height: 1.2;
   margin: 20px 0 30px
 `;

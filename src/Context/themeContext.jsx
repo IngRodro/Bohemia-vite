@@ -1,7 +1,7 @@
 import {
   createContext, useContext, useEffect, useMemo, useState,
 } from 'react';
-import storage from '../utils/storage';
+import storage from '../Utils/storage';
 
 const AppThemeContext = createContext({
   theme: 'light',
@@ -19,7 +19,7 @@ export function AppThemeProvider({ children }) {
   };
 
   const themeToggle = () => {
-    setMode(theme === 'light' ? 'light' : 'light');
+    setMode(theme === 'light' ? 'dark' : 'light');
   };
 
   useEffect(() => {

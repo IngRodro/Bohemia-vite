@@ -20,25 +20,21 @@ export const StyleMenuItem = styled(Button)`
   align-items: center;
   width: max-content;
   font-weight: 700;
+  color: white;
   border-radius: ${({ $type }) => ($type === 'PageItem' ? '0' : '50')}%;
   background: transparent;
-  &:hover {
+  > svg {
+    margin-left: 5px;
+  }
+  :hover {
     opacity: 1;
     border-bottom-color: ${({ theme, $type }) => ($type === 'PageItem' ? theme.colors.primary : 'transparent')};
     :first-child{
-      margin-left: 5px;
       color: ${({ theme }) => theme.colors.primary};
     }
     > svg {
-      margin-left: 5px;
       color: ${({ theme }) => theme.colors.success};
     }
-  }
-  > span {
-    margin-right: 5px;
-  }
-  > svg {
-    margin-left: 5px;
   }
 `;
 
@@ -67,5 +63,5 @@ export const StyleCloseSessionIcon = styled(IconLogout)`
 `;
 
 export const StyleLogInIcon = styled(IconLogin)`
-  color: ${({ theme }) => theme.colors.text};
+  color: ${({ theme }) => theme.colors.white};
 `;

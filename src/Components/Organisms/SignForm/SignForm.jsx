@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Title from '../../Atoms/Title';
 import * as Components from './style';
 
 function App() {
@@ -7,27 +8,26 @@ function App() {
     <Components.Container>
       <Components.SignUpContainer signinIn={signIn}>
         <Components.Form>
-          <Components.Title>Create Account</Components.Title>
+          <Title color="primary" size={32}>Crear una cuenta</Title>
           <Components.Input type="text" placeholder="Name" />
           <Components.Input type="email" placeholder="Email" />
           <Components.Input type="password" placeholder="Password" />
-          <Components.Button>Sign Up</Components.Button>
+          <Components.Button textColor="white">Sign Up</Components.Button>
         </Components.Form>
       </Components.SignUpContainer>
 
       <Components.SignInContainer signinIn={signIn}>
         <Components.Form>
-          <Components.Title>Sign in</Components.Title>
+          <Title color="primary" size={32}>Inicio de sesión</Title>
           <Components.Input type="email" placeholder="Email" />
           <Components.Input type="password" placeholder="Password" />
           <Components.Anchor href="#">Forgot your password?</Components.Anchor>
-          <Components.Button>Sigin In</Components.Button>
+          <Components.Button textColor="white">Iniciar Sesión</Components.Button>
         </Components.Form>
       </Components.SignInContainer>
 
       <Components.OverlayContainer signinIn={signIn}>
         <Components.Overlay signinIn={signIn}>
-
           <Components.LeftOverlayPanel signinIn={signIn}>
             <Components.Title>Welcome Back!</Components.Title>
             <Components.Paragraph>
@@ -39,7 +39,7 @@ function App() {
           </Components.LeftOverlayPanel>
 
           <Components.RightOverlayPanel signinIn={signIn}>
-            <Components.Title>Hello, Friend!</Components.Title>
+            <Title size={32}>Hello, Friend!</Title>
             <Components.Paragraph>
               Enter Your personal details and start journey with us
             </Components.Paragraph>
@@ -47,7 +47,6 @@ function App() {
               Sigin Up
             </Components.GhostButton>
           </Components.RightOverlayPanel>
-
         </Components.Overlay>
       </Components.OverlayContainer>
 
